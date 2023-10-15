@@ -1,3 +1,4 @@
+import javax.xml.crypto.Data;
 import java.time.LocalDate;
 
 public class main {
@@ -33,6 +34,14 @@ public class main {
                 "Salesforce1",
                 dataCriacaoDepartamento,
                 "USD$300,000.00");
+        LocalDate dataAdmissaoFuncionario = LocalDate.of(2023, 10, 15);
+        Funcionario funcionario = new Funcionario(
+                1,
+                "Desenvolvedor",
+                dataAdmissaoFuncionario,
+                "R$3000.00");
+        funcionario.setSalario("R$3100.00");
 
+        departamento.addFuncionario(funcionario);
     }
 }

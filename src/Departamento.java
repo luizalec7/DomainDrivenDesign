@@ -19,6 +19,20 @@ public class Departamento {
         this.dataCriacao = dataCriacao;
         this.valorOrcamentoAnual = valorOrcamentoAnual;
     }
+    public void addFuncionario(Funcionario funcionario){
+        boolean funcionarioJaAdicionado = false;
+        for (int i = 0; i < funcionarios.size(); i++) {
+            if (funcionario.equals(funcionarios.get(i))){
+                System.out.println("Funcionário já adicionado");
+                funcionarioJaAdicionado = true;
+                break;
+            }
+        }
+        if (!funcionarioJaAdicionado){
+            this.funcionarios.add(funcionario);
+            System.out.println("Funcionário adicionado");
+        }
+    }
     public int getId() {
         return id;
     }
