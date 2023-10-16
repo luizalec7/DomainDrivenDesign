@@ -1,13 +1,21 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Cliente extends Usuario{
     int id;
-    Date dataInclusao;
+    LocalDate dataInclusao;
     Usuario usuario;
     int numeroConta;
     ArrayList<Produto> produtos = new ArrayList<Produto>();
 
+    Cliente(){}
+    Cliente(int id, LocalDate dataInclusao, Usuario usuario, int numeroConta){
+        this.id = id;
+        this.dataInclusao = dataInclusao;
+        this.usuario = usuario;
+        this.numeroConta = numeroConta;
+    }
 
     public int getNumeroConta() {
         return numeroConta;
@@ -27,4 +35,19 @@ public class Cliente extends Usuario{
         }
         }
 
+    public LocalDate getDataInclusao() {
+        return dataInclusao;
     }
+
+    public void setDataInclusao(LocalDate dataInclusao) {
+        this.dataInclusao = dataInclusao;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+}

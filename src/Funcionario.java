@@ -23,4 +23,20 @@ public class Funcionario extends Usuario{
     public String getSalario() {
         return salario;
     }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public LocalDate getDataAdmissao() {
+        return dataAdmissao;
+    }
+
+    public void setDataAdmissao(LocalDate dataAdmissao) {
+        this.dataAdmissao = dataAdmissao;
+    }
 }

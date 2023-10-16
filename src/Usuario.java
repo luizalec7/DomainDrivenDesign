@@ -12,7 +12,7 @@ public class Usuario{
      Usuario(){
      }
 
-     Usuario(int id, String nomeDeUsuario, String senha, LocalDate dataRegistro, String nomeCompleto, Endereco endereco){
+     Usuario(int id, String nomeDeUsuario, String senha, LocalDate dataRegistro, Endereco endereco){
          this.id = id;
          this.nomeDeUsuario = nomeDeUsuario;
          this.senha = senha;
