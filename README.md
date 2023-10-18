@@ -1,4 +1,4 @@
-Read Me - Sistema de Gestão de Usuários, Departamentos e Componentes
+Read Me - Sistema de Gestão de Usuários e Departamentos
 Descrição
 Este é um sistema de gerenciamento de usuários, departamentos, clientes e funcionários, construído em Java. Ele permite que você realize as seguintes operações:
 
@@ -7,48 +7,40 @@ Criar um novo departamento com informações como ID, nome, data de criação e 
 Criar um novo cliente vinculado a um usuário existente e associar produtos a esse cliente.
 Criar um novo funcionário vinculado a um usuário existente e a um departamento existente.
 Sair do menu.
-Este sistema agora inclui as seguintes classes adicionais como componentes:
+O sistema também possui validações para evitar a criação de usuários, departamentos ou clientes duplicados.
 
-Classe Endereco
-A classe Endereco representa o endereço de um usuário e possui os seguintes atributos:
+Instruções de Uso
+Execute o programa e siga as instruções apresentadas no console.
 
-cep: Código de Endereçamento Postal (CEP).
-rua: Nome da rua.
-bairro: Nome do bairro.
-cidade: Nome da cidade.
-pais: Nome do país.
-referencia: Campo opcional para uma referência do endereço.
-Esta classe fornece métodos para acessar e definir esses atributos.
+Selecione uma opção digitando o número correspondente e pressione "Enter".
 
-Classe Funcionario
-A classe Funcionario representa um funcionário e herda da classe Usuario. Ela inclui os seguintes atributos:
+Siga as instruções para fornecer os dados necessários para criar um usuário, departamento, cliente ou funcionário, conforme a opção selecionada.
 
-id: Identificador único do funcionário.
-cargo: Cargo do funcionário.
-dataAdmissao: Data de admissão do funcionário.
-salario: Salário do funcionário.
-usuario: Referência ao usuário vinculado ao funcionário.
-departamento: Referência ao departamento em que o funcionário trabalha.
-A classe fornece métodos para acessar e definir esses atributos.
+O sistema fornecerá feedback sobre o sucesso ou falha da operação.
 
-Classe Produto
-A classe Produto representa um produto e possui os seguintes atributos:
+Repita o processo para realizar outras operações ou selecione a opção "5" para sair do programa.
 
-id: Identificador único do produto.
-nomeProduto: Nome do produto.
-valorProduto: Valor do produto.
-tipoProduto: Tipo ou descrição do produto.
-A classe fornece métodos para acessar e definir esses atributos.
+Nota:
 
-Classe Cliente
-A classe Cliente representa um cliente vinculado a um usuário e inclui os seguintes atributos:
+Clientes só podem ser criados a partir de um usuário criado, pois em seu construtor a classe cliente precisa de uma instância de Usuario.
+Funcionários são iguais, porém além da instância de usuário precisam também de um departamento existente.
+A opção de criar um novo cliente só aparecerá no menu quando houver uma instância de usuário criada. A opção de criar um novo funcionário só aparecerá no menu quando existir uma instância de usuário e de departamento.
+Caso o usuário insira uma opção que dê acesso ao código de criação de clientes ou funcionários, mesmo que não esteja aparecendo no console, ele entrará no case da respectiva opção, e caso não tenha criado anteriormente uma instância necessária para a criação desses objetos o programa dará erro. Isso e outros erros serão corrigidos nas sprints posteriores.
 
-id: Identificador único do cliente.
-dataInclusao: Data de inclusão do cliente.
-usuario: Referência ao usuário vinculado ao cliente.
-numeroConta: Número de conta do cliente.
-produtos: Uma lista de produtos associados a este cliente.
-Esta classe também oferece um método addProduto para adicionar produtos à lista de produtos do cliente.
+Classes
+Main: Esta é a classe principal que contém o método main e roda o menu.
+
+Usuario: Esta classe representa um usuário com atributos como ID, nome de usuário, senha e endereço.
+
+Departamento: Esta classe representa um departamento com atributos como ID, nome, data de criação e orçamento anual.
+
+Funcionario: Esta classe representa um funcionário criado a partir de um usuário com atributos como ID, salário e cargo.
+
+Endereço: Esta classe possui como atributos informações sobre o endereço de um usuário, para posterior uso nas próximas sprints.
+
+Cliente: Esta classe representa um cliente criado a partir de um usuário e possui como atributos ID, data de inclusão e um usuário. Também possui um método para adicionar produtos, que adiciona um produto a uma lista de produtos dentro da classe.
+
+Produto: Essa classe representa os produtos da Salesforce que podem ser adicionados ao Cliente.
 
 Requisitos
 Java Development Kit (JDK) instalado.
@@ -56,16 +48,3 @@ Execução
 Compile o código-fonte usando um ambiente de desenvolvimento Java ou utilizando o comando javac Main.java no terminal.
 
 Execute o programa com o comando java Main no terminal.
-
-Observações
-Certifique-se de que os objetos de usuário, departamento, cliente, funcionário e outros componentes criados sejam exclusivos, para evitar duplicatas.
-
-O sistema atual não possui armazenamento persistente de dados, portanto, as informações inseridas serão perdidas quando o programa for encerrado.
-
-Para fins de demonstração, o código inclui exemplos de criação de produtos Salesforce para vincular a clientes. Você pode estender essa funcionalidade, se necessário.
-
-O sistema pode ser expandido e aprimorado de várias maneiras, como a adição de recursos de persistência de dados ou melhorias na interface do usuário.
-
-O código contém alguns comentários para auxiliar na compreensão, mas pode ser mais documentado e modularizado, dependendo dos requisitos do projeto.
-
-Aproveite a gestão de usuários, departamentos, clientes e funcionários com este sistema, agora com componentes adicionais!
