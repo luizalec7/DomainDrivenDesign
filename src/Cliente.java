@@ -10,11 +10,10 @@ public class Cliente extends Usuario{
     ArrayList<Produto> produtos = new ArrayList<Produto>();
 
     Cliente(){}
-    Cliente(int id, LocalDate dataInclusao, Usuario usuario, int numeroConta){
+    Cliente(int id, LocalDate dataInclusao, Usuario usuario){
         this.id = id;
         this.dataInclusao = dataInclusao;
         this.usuario = usuario;
-        this.numeroConta = numeroConta;
     }
 
     public int getNumeroConta() {
