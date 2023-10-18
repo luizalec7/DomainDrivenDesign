@@ -23,8 +23,7 @@ O sistema também possui validações para evitar a criação de usuários, depa
 - Clientes só podem ser criados a partir de um usuário criado, pois em seu construtor a classe cliente precisa de uma instância de Usuario.
 - Funcionários são iguais, porém além da instância de usuário precisam também de um departamento existente.
 - A opção de criar um novo cliente só aparecerá no menu quando houver uma instância de usuário criada. A opção de criar um novo funcionário só aparecerá no menu quando existir uma instância de usuário e de departamento.
-
-Caso o usuário insira uma opção que dê acesso ao código de criação de clientes ou funcionários, mesmo que não esteja aparecendo no console, ele entrará no case da respectiva opção, e caso não tenha criado anteriormente uma instância necessária para a criação desses objetos o programa dará erro. Isso e outros erros serão corrigidos nas sprints posteriores.
+- Caso o usuário insira uma opção que dê acesso ao código de criação de clientes ou funcionários, mesmo que não esteja aparecendo no console, ele entrará no case da respectiva opção, e caso não tenha criado anteriormente uma instância necessária para a criação desses objetos o programa dará erro. Isso e outros erros serão corrigidos nas sprints posteriores.
 
 ## Classes
 - **Main:** Esta é a classe principal que contém o método `main` e roda o menu.
