@@ -7,14 +7,17 @@ public class Funcionario extends Usuario{
     String cargo;
     LocalDate dataAdmissao;
     String salario;
-
+    Usuario usuario;
+    Departamento departamento;
     Funcionario(){}
 
-    Funcionario(int id, String cargo, LocalDate dataAdmissao, String salario){
+    Funcionario(int id, String cargo, LocalDate dataAdmissao, String salario, Usuario usuario, Departamento departamento){
         this.id = id;
         this.cargo = cargo;
         this.dataAdmissao = dataAdmissao;
         this.salario = salario;
+        this.usuario = usuario;
+        this.departamento = departamento;
     }
     public void setSalario(String salario) {
         this.salario = salario;
