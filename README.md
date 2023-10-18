@@ -1,4 +1,4 @@
-# Read Me - Sistema de Gestão de Usuários e Departamentos
+# Sistema de Gestão de Usuários e Departamentos para Salesforce
 
 ## Descrição
 Este é um sistema de gerenciamento de usuários, departamentos, clientes e funcionários, construído em Java. Ele permite que você realize as seguintes operações:
